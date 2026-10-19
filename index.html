@@ -845,11 +845,13 @@ function closeSuccess(){
 
 // ===== SETTINGS: EDIT THESE TWO LINES =====
 const CONFIG={
-  WHATSAPP_NUMBER:"923015553128", // your number: country code + number, no + or spaces
-  FORM_ENDPOINT:""                // e.g. "https://formspree.io/f/xxxxxxxx" (see guide)
+  WHATSAPP_NUMBER:"923015553128", // no + and no spaces
+  FORM_ENDPOINT:""
 };
+document.querySelectorAll('[data-wa]').forEach(a=>{
+  a.href='https://wa.me/'+CONFIG.WHATSAPP_NUMBER+'?text='+encodeURIComponent('Assalamu Alaikum, I would like to book a free trial Quran class.');
+});
 <a href="https://wa.me/923015553128" data-wa target="_blank" rel="noopener">WhatsApp Us</a>
-
 <a href="https://wa.me/923015553128" data-wa target="_blank" rel="noopener" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
 document.getElementById('year').textContent=new Date().getFullYear();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeSuccess();}});
