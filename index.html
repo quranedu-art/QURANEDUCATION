@@ -845,10 +845,10 @@ function closeSuccess(){
 
 // ===== SETTINGS: EDIT THESE TWO LINES =====
 const CONFIG={
-  WHATSAPP_NUMBER:"923000000000", // your number: country code + number, no + or spaces
+  WHATSAPP_NUMBER:"923015553128", // your number: country code + number, no + or spaces
   FORM_ENDPOINT:""                // e.g. "https://formspree.io/f/xxxxxxxx" (see guide)
 };
-document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+923015553128+'?text='+encodeURIComponent('Assalamu Alaikum, I would like to book a free trial Quran class.');});
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+_blank+'?text='+encodeURIComponent('Assalamu Alaikum, I would like to book a free trial Quran class.');});
 document.getElementById('year').textContent=new Date().getFullYear();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeSuccess();}});
 
