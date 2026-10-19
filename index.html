@@ -747,7 +747,7 @@ section,.cta-section{scroll-margin-top:72px;}
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:info@quraneducation.online">info@quraneducation.online</a></li>
-          <li><a href="https://wa.me/" data-wa target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><a href="https://wa.me/" data-wa target="+923015553128" rel="noopener">WhatsApp Us</a></li>
           <li><a href="/privacy.html">Privacy Policy</a></li>
           <li><a href="/terms.html">Terms of Service</a></li>
           <li><a href="/refund.html">Refund Policy</a></li>
@@ -762,7 +762,7 @@ section,.cta-section{scroll-margin-top:72px;}
 </footer>
 
 <!-- WHATSAPP BUTTON -->
-<a href="https://wa.me/" data-wa target="_blank" rel="noopener" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/" data-wa target="+923015553128" rel="noopener" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">💬</a>
 
 <!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -848,7 +848,7 @@ const CONFIG={
   WHATSAPP_NUMBER:"923000000000", // your number: country code + number, no + or spaces
   FORM_ENDPOINT:""                // e.g. "https://formspree.io/f/xxxxxxxx" (see guide)
 };
-document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+CONFIG.WHATSAPP_NUMBER+'?text='+encodeURIComponent('Assalamu Alaikum, I would like to book a free trial Quran class.');});
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+923015553128+'?text='+encodeURIComponent('Assalamu Alaikum, I would like to book a free trial Quran class.');});
 document.getElementById('year').textContent=new Date().getFullYear();
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeSuccess();}});
 
@@ -866,7 +866,7 @@ document.getElementById('trialForm').addEventListener('submit',async e=>{
     }else{
       // No form service connected yet: send the booking to your WhatsApp so no lead is lost
       const m='Assalamu Alaikum! Free trial request%0A'+Object.entries(data).map(([k,v])=>k.replace('_',' ')+': '+v).join('%0A');
-      window.open('https://wa.me/'+CONFIG.WHATSAPP_NUMBER+'?text='+m,'_blank');
+      window.open('https://wa.me/'+923015553128+'?text='+m,'_blank');
     }
     form.reset(); closeModal();
     document.getElementById('successOverlay').classList.add('active'); document.body.style.overflow='hidden';
