@@ -867,10 +867,10 @@ document.getElementById('trialForm').addEventListener('submit',async e=>{
     if(CONFIG.FORM_ENDPOINT){
       const r=await fetch(CONFIG.FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)});
       if(!r.ok) throw new Error('bad response');
-    }else{
-      // No form service connected yet: send the booking to your WhatsApp so no lead is lost
-      const m='Assalamu Alaikum! Free trial request%0A'+Object.entries(data).map(([k,v])=>k.replace('_',' ')+': '+v).join('%0A');
-      window.open('https://wa.me/'+923015553128+'?text='+m,'_blank');
+   }else{
+  const m=encodeURIComponent('Assalamu Alaikum! Free trial request\n'+Object.entries(data).map(([k,v])=>k.replace(/_/g,' ')+': '+v).join('\n'));
+  window.open('https://wa.me/'+CONFIG.WHATSAPP_NUMBER+'?text='+m,'_blank');
+}
     }
     form.reset(); closeModal();
     document.getElementById('successOverlay').classList.add('active'); document.body.style.overflow='hidden';
